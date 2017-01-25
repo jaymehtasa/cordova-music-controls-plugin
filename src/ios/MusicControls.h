@@ -18,6 +18,7 @@
 @property NSString * latestEventCallbackId;
 
 - (void) create: (CDVInvokedUrlCommand *) command;
+- (void) update: (CDVInvokedUrlCommand *) command;
 - (void) updateIsPlaying: (CDVInvokedUrlCommand *) command;
 - (void) destroy: (CDVInvokedUrlCommand *) command;
 - (void) watch: (CDVInvokedUrlCommand *) command;

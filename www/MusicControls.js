@@ -1,3 +1,4 @@
+cordova.define("cordova-plugin-music-controls.MusicControls", function(require, exports, module) {
 module.exports = {
   updateCallback: function () {},
 
@@ -16,6 +17,25 @@ module.exports = {
     data.dismissable = !isUndefined(data.dismissable) ? data.dismissable : false;
 
     cordova.exec(successCallback, errorCallback, 'MusicControls', 'create', [data]);
+  },
+
+  update: function (data, successCallback, errorCallback) {
+    console.log('MC..23');
+    console.log(data);
+    data.artist = !isUndefined(data.artist) ? data.artist : '';
+    data.track = !isUndefined(data.track) ? data.track : '';
+    data.album = !isUndefined(data.album) ? data.album : '';
+    data.cover = !isUndefined(data.cover) ? data.cover : '';
+    data.ticker = !isUndefined(data.ticker) ? data.ticker : '';
+    data.duration = !isUndefined(data.duration) ? data.duration : 0;
+    data.elapsed = !isUndefined(data.elapsed) ? data.elapsed : 0;
+    data.isPlaying = !isUndefined(data.isPlaying) ? data.isPlaying : true;
+    data.hasPrev = !isUndefined(data.hasPrev) ? data.hasPrev : true;
+    data.hasNext = !isUndefined(data.hasNext) ? data.hasNext : true;
+    data.hasClose = !isUndefined(data.hasClose) ? data.hasClose : false;
+    data.dismissable = !isUndefined(data.dismissable) ? data.dismissable : false;
+
+    cordova.exec(successCallback, errorCallback, 'MusicControls', 'update', [data]);
   },
 
   updateIsPlaying: function (isPlaying, successCallback, errorCallback) {
@@ -46,3 +66,5 @@ module.exports = {
 function isUndefined(val) {
   return val === undefined;
 }
+
+});
