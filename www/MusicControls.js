@@ -1,4 +1,3 @@
-cordova.define("cordova-plugin-music-controls.MusicControls", function(require, exports, module) {
 module.exports = {
   updateCallback: function () {},
 
@@ -20,7 +19,7 @@ module.exports = {
   },
 
   update: function (data, successCallback, errorCallback) {
-    console.log('MC..23');
+    console.log('MC..22');
     console.log(data);
     data.artist = !isUndefined(data.artist) ? data.artist : '';
     data.track = !isUndefined(data.track) ? data.track : '';
@@ -66,5 +65,3 @@ module.exports = {
 function isUndefined(val) {
   return val === undefined;
 }
-
-});

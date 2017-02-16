@@ -112,16 +112,6 @@ public class MusicControls extends CordovaPlugin {
 				}
 			});
 		}
-//		else if (action.equals("update")) {
-//			final MusicControlsInfos infos = new MusicControlsInfos(args);
-//			this.cordova.getThreadPool().execute(new Runnable() {
-//				public void run() {
-//					notification.updateNotification(infos);
-//					callbackContext.success("success");
-//				}
-//			});
-//		}
-
 		else if (action.equals("updateIsPlaying")){
 			final JSONObject params = args.getJSONObject(0);
 			final boolean isPlaying = params.getBoolean("isPlaying");
